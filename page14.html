@@ -66,6 +66,11 @@
 
     noBtn.addEventListener("click", () => {
       begMessage.style.display = "block";
+      setTimeout(() => {
+        begMessage.style.display = "none";
+      }, 1000);
+      yesScale += 0.15;
+      yesBtn.style.transform = `scale(${yesScale})`;
     });
 
     yesBtn.addEventListener("click", () => {
