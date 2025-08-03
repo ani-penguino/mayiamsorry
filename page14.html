@@ -1,0 +1,80 @@
+<!-- page14.html - 最后一页：求求你了 你可以原谅我吗 -->
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>求求你了 你可以原谅我吗</title>
+  <style>
+    body {
+      background-color: #fff0f5;
+      font-family: "Arial", sans-serif;
+      text-align: center;
+      padding: 100px 30px;
+      color: #ad1457;
+    }
+    h1 {
+      font-size: 48px;
+      margin-bottom: 60px;
+    }
+    .btn {
+      padding: 14px 30px;
+      font-size: 20px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      margin: 20px;
+      transition: all 0.3s ease;
+    }
+    #yesBtn {
+      background-color: #f06292;
+      color: white;
+    }
+    #noBtn {
+      background-color: #eeeeee;
+      color: #333;
+    }
+    #begMessage {
+      font-size: 28px;
+      color: #c2185b;
+      display: none;
+      margin-top: 40px;
+    }
+    #finalMessage {
+      font-size: 30px;
+      color: #880e4f;
+      display: none;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🥺 求求你了 你可以原谅我吗 🥺</h1>
+
+  <button class="btn" id="yesBtn">原谅你啦</button>
+  <button class="btn" id="noBtn">不原谅你</button>
+
+  <div id="begMessage">🥺 求求你啦 求求你啦 求求你啦 🥺</div>
+  <div id="finalMessage">那快去把我的微信拉回来吧 求求你啦 🥹</div>
+
+  <script>
+    const yesBtn = document.getElementById("yesBtn");
+    const noBtn = document.getElementById("noBtn");
+    const begMessage = document.getElementById("begMessage");
+    const finalMessage = document.getElementById("finalMessage");
+
+    let yesScale = 1;
+
+    noBtn.addEventListener("click", () => {
+      begMessage.style.display = "block";
+    });
+
+    yesBtn.addEventListener("click", () => {
+      yesScale += 0.3;
+      yesBtn.style.transform = `scale(${yesScale})`;
+      if (yesScale > 2.5) {
+        finalMessage.style.display = "block";
+      }
+    });
+  </script>
+</body>
+</html>
